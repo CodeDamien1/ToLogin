@@ -1,12 +1,25 @@
 
 import './App.css';
+import Login from './components/login/Login.js'
 
-function App() {
+import { useState, useEffect } from 'react';
+
+const App = () => {
+
+  const [user, setUser] = useState()
+
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="login-container">
+            {user 
+      ?
+      <h2>Hello welcome {user} you have logged in</h2>
+      :
+      <h2>Please log in</h2>
 
-      </header>
+      }
+      <Login newUser={setUser}/>
+
     </div>
   );
 }
