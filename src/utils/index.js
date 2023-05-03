@@ -1,4 +1,4 @@
-export const registerUser = async (username, email, password, newUser) => {
+export const registerUser = async (username, password, newUser) => {
     try {
       const response = await fetch("http://localhost:5001/users/register", {
         method: "POST",
@@ -7,7 +7,6 @@ export const registerUser = async (username, email, password, newUser) => {
         },
         body: JSON.stringify({
           "username": username,
-          "email": email,
           "password": password
         })
       });
