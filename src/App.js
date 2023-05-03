@@ -12,7 +12,7 @@ const App = () => {
   const [user, setUser] = useState()
 
   return (
-    <div className="login-container">
+    <div className="container">
             {user 
       ?
       <h2>Hello welcome {user} you have logged in</h2>
