@@ -1,14 +1,27 @@
 
 import './App.css';
+import Register from './components/register/Register';
 
-function App() {
+import { useState, useEffect } from 'react';
+
+const App = () => {
+
+  const [user, setUser] = useState()
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="login-container">
+            {user 
+      ?
+      <h2>Hello welcome {user} you have logged in</h2>
+      :
+      <h2>Please log in</h2>
 
-      </header>
+      }
+      <Register newUser={setUser}/>
+
     </div>
   );
 }
 
 export default App;
+
