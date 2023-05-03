@@ -1,32 +1,28 @@
-
 import './App.css';
 
 import Register from './components/register/Register';
 import Login from './components/login/Login.js'
 import TodoList from './components/Todo/TodoList';
-// import Toggle from './components/Toggle/Toggle';
+import Toggle from './components/Toggle/Toggle';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const App = () => {
-
-  const [user, setUser] = useState()
+  
+  const [user, setUser] = useState();
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const handleToggle = () => {
-    setIsFlipped(!isFlipped);
+  const handleToggle = (isChecked) => {
+    setIsFlipped(isChecked);
   };
   
   return (
-    <div>
+    <div className="App">
       <div className="toggle-container">
         <button className={!isFlipped ? "active" : ""} onClick={() => setIsFlipped(false)}>Register</button>
-        <h3>OR </h3>
+        <Toggle onToggle={handleToggle} />
         <button className={isFlipped ? "active" : ""} onClick={() => setIsFlipped(true)}>Login</button>
       </div>
-      {/* <div className="toggle-container">
-        <Toggle />
-      </div> */}
       <div className="container">
         <div className={`card-container ${isFlipped ? 'flipped' : ''}`}>
           <div className="card">

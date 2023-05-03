@@ -1,11 +1,20 @@
-import React, { useState } from "react";
-import "../Toggle/Toggle.css";
+import { useState } from 'react';
+import './Toggle.css';
 
-function Toggle() {
+const Toggle = ({ onToggle }) => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+    onToggle && onToggle(!isChecked);
+  };
 
   return (
- <h1></h1>
+    <div>
+      <input type="checkbox" id="toggle" checked={isChecked} onChange={handleToggle} />
+      <label htmlFor="toggle"></label>
+    </div>
   );
-}
+};
 
 export default Toggle;
