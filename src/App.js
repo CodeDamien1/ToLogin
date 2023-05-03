@@ -1,13 +1,15 @@
 
 import './App.css';
+
+import Register from './components/register/Register';
 import Login from './components/login/Login.js'
+
 
 import { useState, useEffect } from 'react';
 
 const App = () => {
 
   const [user, setUser] = useState()
-
 
   return (
     <div className="login-container">
@@ -18,10 +20,14 @@ const App = () => {
       <h2>Please log in</h2>
 
       }
+
+      <Register newUser={setUser}/>
       <Login newUser={setUser}/>
+
 
     </div>
   );
 }
 
 export default App;
+
