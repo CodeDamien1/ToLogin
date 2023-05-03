@@ -3,7 +3,7 @@ import './App.css';
 
 import Register from './components/register/Register';
 import Login from './components/login/Login.js'
-
+import TodoList from './components/Todo/TodoList';
 
 import { useState, useEffect } from 'react';
 
@@ -23,9 +23,7 @@ const App = () => {
 
       <Register newUser={setUser}/>
       <Login newUser={setUser}/>
-
-
-    </div>
+      <TodoList />
   );
 }
 
