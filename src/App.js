@@ -1,12 +1,14 @@
 
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+import TodoList from './components/Todo/TodoList';
 
-      </header>
+
+const App = () => {
+
+  return (
+    <div>
+      <TodoList />
     </div>
   );
 }
