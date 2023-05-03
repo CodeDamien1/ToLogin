@@ -24,6 +24,7 @@ const App = () => {
       <Register newUser={setUser}/>
       <Login newUser={setUser}/>
       <TodoList />
+      </div>
   );
 }
 
