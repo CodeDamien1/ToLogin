@@ -3,12 +3,11 @@ import { registerUser } from "../../utils";
 
 const Register = ({ newUser }) => {
   const [username, setUsername] = useState();
-  const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    await registerUser(username, email, password, newUser);
+    await registerUser(username, password, newUser);
   }
 
   return (
@@ -17,10 +16,6 @@ const Register = ({ newUser }) => {
       <form onSubmit={submitHandler}>
         <label>Username:
           <input onChange={(e) => setUsername(e.target.value)}></input>
-        </label>
-
-        <label>Email:
-          <input onChange={(e) => setEmail(e.target.value)}></input>
         </label>
 
         <label>Password:
