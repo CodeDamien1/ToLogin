@@ -13,7 +13,7 @@ const Register = ({ newUser, handleFlip }) => {
 
   return (
     <div className="register-container">
-      <h1>Register a new account:</h1>
+      <h1>Create an account</h1>
       <form onSubmit={submitHandler} className="formRegister">
         <label>Username:
           <input onChange={(e) => setUsername(e.target.value)}></input>
@@ -23,7 +23,7 @@ const Register = ({ newUser, handleFlip }) => {
           <input onChange={(e) => setPassword(e.target.value)} type="password"></input>
         </label>
 
-        <button type="submit" className="userRegisterButton">register</button>
+        <button type="submit" className="userRegisterButton">REGISTER</button>
       </form>
     </div>
   );
