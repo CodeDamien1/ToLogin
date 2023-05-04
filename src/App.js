@@ -41,7 +41,7 @@ const App = () => {
     <div className="App">
       <div className="toggle-container">
         <button className={!isFlipped ? "active" : ""} onClick={() => setIsFlipped(false)}>Register</button>
-        <Toggle onToggle={handleToggle} />
+        <Toggle onToggle={handleToggle} isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
         <button className={isFlipped ? "active" : ""} onClick={() => setIsFlipped(true)}>Login</button>
       </div>
       <div className="container">
