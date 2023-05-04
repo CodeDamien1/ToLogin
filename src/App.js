@@ -1,3 +1,5 @@
+import {getCookie} from "./common"
+import { authCheck } from "./utils";
 
 import './App.css';
 
@@ -10,6 +12,21 @@ import { useState, useEffect } from 'react';
 const App = () => {
 
   const [user, setUser] = useState()
+
+  useEffect(()=>{
+    let jwt = getCookie("jwt_token")
+    console.log("!!!!!!!!!!")
+    console.log(jwt);
+
+    if (jwt !== false){
+      loginWithToken(jwt);
+    }
+  }, []);
+
+  const loginWithToken = async (jwt) => {
+    const user = await authCheck(jwt)
+    setUser(user);
+  }
 
   return (
     <div className="container">
