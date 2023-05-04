@@ -2,7 +2,7 @@ import { useState } from "react";
 import { registerUser } from "../../utils";
 import '../register/Register.css';
 
-const Register = ({ newUser }) => {
+const Register = ({ newUser, handleFlip }) => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
@@ -14,7 +14,7 @@ const Register = ({ newUser }) => {
   return (
     <div className="register-container">
       <h1>Register a new account:</h1>
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className="formRegister">
         <label>Username:
           <input onChange={(e) => setUsername(e.target.value)}></input>
         </label>
@@ -23,7 +23,7 @@ const Register = ({ newUser }) => {
           <input onChange={(e) => setPassword(e.target.value)} type="password"></input>
         </label>
 
-        <button type="submit">register</button>
+        <button type="submit" className="userRegisterButton">register</button>
       </form>
     </div>
   );

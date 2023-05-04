@@ -49,7 +49,7 @@ function TodoList() {
     const [archivedTodos, setArchivedTodos] = useState([]);
   
     return (
-      <div className="container">
+      <div className="todolist-container">
         <h1>To-Do List</h1>
         <form onSubmit={handleFormSubmit}>
           <input
@@ -58,7 +58,7 @@ function TodoList() {
             onChange={handleInputChange}
             placeholder="Add a new task..."
           />
-          <button type="submit">Add To List</button>
+          <button type="submit" className='addtolist'>Add To List</button>
         </form>
         <ul>
           {todos.map((todo) => (

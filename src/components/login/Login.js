@@ -1,8 +1,9 @@
 import React from "react"
 import {useState} from "react"
 import { loginUser } from "../../utils";
+import '../login/Login.css';
 
-const Login = ({newUser}) => {
+const Login = ({newUser, handleFlip}) => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
 
@@ -14,11 +15,11 @@ const Login = ({newUser}) => {
     }
     
     return (
-      <div>
+      <div className="login-container">
         <>
         <h1>Login Below</h1>
 
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className="formLogin">
         <label>Username:
             <input onChange={(e) => setUsername(e.target.value)}></input>
         </label>
@@ -27,7 +28,7 @@ const Login = ({newUser}) => {
             <input onChange={(e) => setPassword(e.target.value)} type="password"></input>
         </label>
 
-        <button type="submit">Click here to login</button>
+        <button type="submit" className="userLoginButton">Click here to login</button>
         </form>
         </>
       </div>
