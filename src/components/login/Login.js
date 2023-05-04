@@ -17,7 +17,7 @@ const Login = ({newUser, handleFlip}) => {
     return (
       <div className="login-container">
         <>
-        <h1>Login Below</h1>
+        <h1>Log in to your account</h1>
 
         <form onSubmit={submitHandler} className="formLogin">
         <label>Username:
@@ -28,7 +28,7 @@ const Login = ({newUser, handleFlip}) => {
             <input onChange={(e) => setPassword(e.target.value)} type="password"></input>
         </label>
 
-        <button type="submit" className="userLoginButton">Click here to login</button>
+        <button type="submit" className="userLoginButton">LOGIN</button>
         </form>
         </>
       </div>

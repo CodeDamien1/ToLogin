@@ -1,5 +1,5 @@
 
-import {getCookie} from "./common"
+import {deleteCookie, getCookie} from "./common"
 import { authCheck } from "./utils";
 
 
@@ -37,6 +37,12 @@ const App = () => {
     setUser(user);
   }
 
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    setUser(null);
+    deleteCookie("jwt_token");
+  }
+
   return (
     <div className="App">
       <div className="toggle-container">
@@ -57,9 +63,12 @@ const App = () => {
         </div>
         {user 
           ?
-          <h1>Hello welcome {user} you have logged in</h1>
+          <div className="welcome-container">
+          <h1 className="welcome-message">Welcome back, {user}! Here are your tasks for today.</h1>
+          <button className="logout" onClick={handleLogOut}>Log Out</button>
+          </div>
           :
-          <h1>Please log in</h1>
+          <h1 className="welcome-message">Please sign in to access your to-do list.</h1>
         }
         <div className="todo-container">
           <TodoList />
