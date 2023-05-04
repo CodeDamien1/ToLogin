@@ -1,0 +1,78 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  form {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  
+  input[type='text'] {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 2px solid #333;
+    flex-grow: 1;
+  }
+  
+  button[type='submit'] {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button[type='submit']:hover {
+    background-color: #555;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  li.done span {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  li input[type='text'] {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: 2px solid #333;
+    flex-grow: 1;
+  }
+  
+  li .actions button {
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  li .actions button:hover {
+    background-color: #555;
+  }

@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 project-week-10-design
+
+.vscode
