@@ -10,6 +10,9 @@ import Login from './components/login/Login.js'
 import TodoList from './components/Todo/TodoList';
 import Toggle from './components/Toggle/Toggle';
 
+import banner from './icons/banner.png';
+import logo from './icons/TODOLIST.png'
+
 import { useState, useEffect } from 'react';
 
 const App = () => {
@@ -45,35 +48,44 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="toggle-container">
-        <button className={!isFlipped ? "active" : ""} onClick={() => setIsFlipped(false)}>Register</button>
-        <Toggle onToggle={handleToggle} isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
-        <button className={isFlipped ? "active" : ""} onClick={() => setIsFlipped(true)}>Login</button>
-      </div>
-      <div className="container">
-        <div className={`card-container ${isFlipped ? 'flipped' : ''}`}>
-          <div className="card">
-            <div className="front">
-              <Register newUser={setUser} />
-            </div>
-            <div className="back">
-              <Login newUser={setUser} />
-            </div>
+      {user ? (
+        <div>
+          <div class="banner-container">
+          <img src={banner} className="banner-image" alt="banner"></img>
           </div>
-        </div>
-        {user 
-          ?
           <div className="welcome-container">
-          <h1 className="welcome-message">Welcome back, {user}! Here are your tasks for today.</h1>
-          <button className="logout" onClick={handleLogOut}>Log Out</button>
+            <h1 className="welcome-message">Welcome back, {user}! Here are your tasks for today.</h1>
+            <button className="logout" onClick={handleLogOut}>Log Out</button>
           </div>
-          :
-          <h1 className="welcome-message">Please sign in to access your to-do list.</h1>
-        }
-        <div className="todo-container">
-          <TodoList />
+          <div className="todo-container">
+            <TodoList />
+          </div>
         </div>
-      </div>
+      ) : (
+        <div>
+          <div className="toggle-container">
+            <button className={!isFlipped ? "active" : ""} onClick={() => setIsFlipped(false)}>Register</button>
+            <Toggle onToggle={handleToggle} isFlipped={isFlipped} setIsFlipped={setIsFlipped} />
+            <button className={isFlipped ? "active" : ""} onClick={() => setIsFlipped(true)}>Login</button>
+          </div>
+          <div className="container">
+            <div className={`card-container ${isFlipped ? 'flipped' : ''}`}>
+              <div className="card">
+                <div className="front">
+                  <Register newUser={setUser} />
+                </div>
+                <div className="back">
+                  <Login newUser={setUser} />
+                </div>
+                </div>
+              </div>
+            </div>
+            <h1 className="signin-message">Please sign in to access your to-do list.</h1>
+          <div class="logo-container">
+          <img src={logo} className="logo-image" alt="logo"></img>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

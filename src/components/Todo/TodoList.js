@@ -60,7 +60,7 @@ function TodoList() {
           />
           <button type="submit" className='addtolist'>Add To List</button>
         </form>
-        <ul>
+        <ul className='todo-list'>
           {todos.map((todo) => (
             <TodoItem
               key={todo.id}
@@ -121,8 +121,8 @@ function TodoList() {
               value={newText}
               onChange={(event) => setNewText(event.target.value)}
             />
-            <button onClick={handleSaveClick}>Save</button>
-            <button onClick={handleCancelClick}>Cancel</button>
+            <button className="savechanges" onClick={handleSaveClick}>Save</button>
+            <button className="cancelchanges" onClick={handleCancelClick}>Cancel</button>
       </>
     ) : (
       <>
