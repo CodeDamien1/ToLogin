@@ -61,6 +61,7 @@ const App = () => {
           <div className="todo-container">
             <TodoList />
           </div>
+          <MessageBoard />
         </div>
       ) : (
         <div>
@@ -87,7 +88,6 @@ const App = () => {
           </div>
         </div>
       )}
-      <MessageBoard />
     </div>
   );
 }
