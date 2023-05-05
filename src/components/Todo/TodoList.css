@@ -94,5 +94,48 @@
   }
 
   .todo-list{
-    width: 1000px;
+    width: 687px;
+  }
+
+  .archived-list-container {
+    position: absolute;
+    top: 300px;
+    right: 100px;
+    border: 5px outset #000000;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .archived-list-container h2:first-child {
+    border: 2px dashed #333;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+ 
+  .archived-list-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .archived-list-container li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .archived-list-container li::before {
+    content: '\2713';
+    position: absolute;
+    left: -10px;
+    top: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 25px;
   }

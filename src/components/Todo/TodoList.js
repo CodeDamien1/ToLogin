@@ -72,12 +72,14 @@ function TodoList() {
             />
           ))}
         </ul>
+        <div className='archived-list-container'>
         <h2>Archived List</h2>
         <ul>
           {archivedTodos.map((todo) => (
             <li key={todo.id}>{todo.text}</li>
           ))}
         </ul>
+        </div>
       </div>
     );
   }

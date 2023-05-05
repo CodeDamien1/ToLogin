@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './Toggle.css';
 
 const Toggle = ({ onToggle, isFlipped, setIsFlipped }) => {

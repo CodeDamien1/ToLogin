@@ -9,6 +9,7 @@ import Register from './components/register/Register';
 import Login from './components/login/Login.js'
 import TodoList from './components/Todo/TodoList';
 import Toggle from './components/Toggle/Toggle';
+import MessageBoard from './components/messageboard/MessageBoard';
 
 import banner from './icons/banner.png';
 import logo from './icons/TODOLIST.png'
@@ -86,6 +87,7 @@ const App = () => {
           </div>
         </div>
       )}
+      <MessageBoard />
     </div>
   );
 }
