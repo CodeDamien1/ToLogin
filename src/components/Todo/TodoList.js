@@ -60,7 +60,7 @@ function TodoList() {
           />
           <button type="submit" className='addtolist'>Add To List</button>
         </form>
-        <ul>
+        <ul className='todo-list'>
           {todos.map((todo) => (
             <TodoItem
               key={todo.id}
@@ -72,12 +72,14 @@ function TodoList() {
             />
           ))}
         </ul>
+        <div className='archived-list-container'>
         <h2>Archived List</h2>
         <ul>
           {archivedTodos.map((todo) => (
             <li key={todo.id}>{todo.text}</li>
           ))}
         </ul>
+        </div>
       </div>
     );
   }
@@ -121,8 +123,8 @@ function TodoList() {
               value={newText}
               onChange={(event) => setNewText(event.target.value)}
             />
-            <button onClick={handleSaveClick}>Save</button>
-            <button onClick={handleCancelClick}>Cancel</button>
+            <button className="savechanges" onClick={handleSaveClick}>Save</button>
+            <button className="cancelchanges" onClick={handleCancelClick}>Cancel</button>
       </>
     ) : (
       <>

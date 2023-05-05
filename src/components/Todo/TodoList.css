@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .todolist-container {
     max-width: 600px;
     margin: 0 auto;
@@ -47,11 +49,13 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
   }
   
   li.done span {
     text-decoration: line-through;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   
   li input[type='text'] {
@@ -75,4 +79,63 @@
   
   li .actions button:hover {
     background-color: #555;
+  }
+
+  .cancelchanges,
+  .savechanges {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .todo-list{
+    width: 687px;
+  }
+
+  .archived-list-container {
+    position: absolute;
+    top: 300px;
+    right: 100px;
+    border: 5px outset #000000;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .archived-list-container h2:first-child {
+    border: 2px dashed #333;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+ 
+  .archived-list-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .archived-list-container li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .archived-list-container li::before {
+    content: '\2713';
+    position: absolute;
+    left: -10px;
+    top: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 25px;
   }
