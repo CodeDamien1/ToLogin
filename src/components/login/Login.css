@@ -16,7 +16,7 @@
   background-color: #fff;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -35,7 +35,7 @@ input {
 }
 
 .userLoginButton {
-  width: 100%;
+  width: 60%;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;

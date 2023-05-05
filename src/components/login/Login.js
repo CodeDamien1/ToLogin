@@ -3,7 +3,7 @@ import {useState} from "react"
 import { loginUser } from "../../utils";
 import '../login/Login.css';
 
-const Login = ({newUser, handleFlip}) => {
+const Login = ({ newUser }) => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
 
